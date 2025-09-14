@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sources - Federal Tax Receipt Generator</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Tax Receipt Generator</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="data-sources.html" class="nav-link active">Data Sources</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Data Sources & Methodology</h1>
+            <p>Understanding where our data comes from and how calculations are made</p>
+        </header>
+        
+        <main>
+            <div class="content-section">
+                <h2>Federal Budget Data</h2>
+                <div class="info-card">
+                    <h3>Budget Categories & Percentages</h3>
+                    <p>Our federal spending breakdown is based on historical budget data from:</p>
+                    <ul>
+                        <li><strong>Office of Management and Budget (OMB)</strong> - Official federal budget documents</li>
+                        <li><strong>Congressional Budget Office (CBO)</strong> - Budget analysis and projections</li>
+                        <li><strong>U.S. Treasury Department</strong> - Monthly budget statements</li>
+                        <li><strong>Government Accountability Office (GAO)</strong> - Federal spending analysis</li>
+                    </ul>
+                    <p><em>Note: Current data is estimated for demonstration purposes. Real federal budget data should be used for production.</em></p>
+                </div>
+
+                <h2>Tax Rate Data</h2>
+                <div class="info-card">
+                    <h3>Federal Income Tax Brackets</h3>
+                    <p>Tax calculations are based on official IRS tax brackets and standard deductions:</p>
+                    <ul>
+                        <li><strong>Internal Revenue Service (IRS)</strong> - Official tax tables and brackets</li>
+                        <li><strong>Tax Foundation</strong> - Historical tax rate analysis</li>
+                        <li><strong>Congressional Research Service</strong> - Tax policy analysis</li>
+                    </ul>
+                    <p>Our calculator uses the standard deduction and progressive tax brackets for single filers.</p>
+                </div>
+
+                <h2>Methodology</h2>
+                <div class="info-card">
+                    <h3>How We Calculate Your Tax Receipt</h3>
+                    <ol>
+                        <li><strong>Tax Calculation:</strong> We calculate your federal income tax using the progressive tax system with standard deduction</li>
+                        <li><strong>Proportional Allocation:</strong> Your calculated tax amount is then proportionally allocated based on federal budget percentages</li>
+                        <li><strong>Category Breakdown:</strong> Each budget category shows both dollar amount and percentage of your total tax</li>
+                        <li><strong>Visualization:</strong> Charts and graphs help visualize the spending breakdown</li>
+                    </ol>
+                </div>
+
+                <h2>Data Limitations</h2>
+                <div class="info-card warning">
+                    <h3>Important Disclaimers</h3>
+                    <ul>
+                        <li>This tool provides <strong>estimates only</strong> and should not be used for tax planning</li>
+                        <li>Actual tax calculations may vary based on deductions, credits, and individual circumstances</li>
+                        <li>Federal budget data changes annually and may not reflect real-time spending</li>
+                        <li>This tool does not account for state or local taxes</li>
+                        <li>Consult a tax professional for actual tax advice</li>
+                    </ul>
+                </div>
+
+                <h2>Sources by Year</h2>
+                <div class="sources-grid">
+                    <div class="source-card">
+                        <h4>2023</h4>
+                        <ul>
+                            <li>OMB Budget of the U.S. Government</li>
+                            <li>IRS Publication 15-T</li>
+                            <li>CBO Budget and Economic Outlook</li>
+                        </ul>
+                    </div>
+                    <div class="source-card">
+                        <h4>2022</h4>
+                        <ul>
+                            <li>OMB Historical Tables</li>
+                            <li>IRS Tax Tables</li>
+                            <li>Treasury Monthly Statements</li>
+                        </ul>
+                    </div>
+                    <div class="source-card">
+                        <h4>2021</h4>
+                        <ul>
+                            <li>OMB Budget Data</li>
+                            <li>IRS Publication 15-T</li>
+                            <li>GAO Federal Spending Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="source-card">
+                        <h4>2020</h4>
+                        <ul>
+                            <li>OMB Historical Data</li>
+                            <li>IRS Tax Rate Schedules</li>
+                            <li>CBO Historical Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to See Your Tax Receipt?</h2>
+                    <p>Enter your salary and discover how your federal tax dollars are spent</p>
+                    <a href="index.html" class="btn-primary">Generate Your Receipt</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tax Receipt Generator</h3>
+                    <p>Transparency in federal spending. See exactly how your tax dollars are allocated across government programs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="data-sources.html">Data Sources</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tax Years</h4>
+                    <ul>
+                        <li><a href="#2023">2023</a></li>
+                        <li><a href="#2022">2022</a></li>
+                        <li><a href="#2021">2021</a></li>
+                        <li><a href="#2020">2020</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This tool provides estimates based on federal budget data. Actual tax calculations may vary based on individual circumstances.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tax Receipt Generator. Built for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
