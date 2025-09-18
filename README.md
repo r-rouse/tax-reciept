@@ -8,8 +8,7 @@ A lightweight, client-side web application that visualizes how **your federal in
 
 ## 🌐 Live Site
 
-**URL:** https://<your-live-url>  
-*(Replace this line with your deployed link.)*
+TBD
 
 ---
 
