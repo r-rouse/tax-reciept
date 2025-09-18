@@ -225,11 +225,49 @@ header p {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .receipt-info p {
     font-size: 1.1rem;
     margin: 5px 0;
+}
+
+.tax-summary {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.tax-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tax-item:last-child {
+    border-bottom: none;
+}
+
+.tax-item.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.tax-label {
+    font-weight: 600;
+}
+
+.tax-amount {
+    font-weight: bold;
+    color: #fff;
 }
 
 .receipt-content {
@@ -266,6 +304,37 @@ header p {
     border-radius: 8px;
 }
 
+.section-header {
+    margin: 30px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+.section-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.line-item.subtotal {
+    background-color: #e8f4fd;
+    font-weight: bold;
+    margin: 10px -20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.line-item.total {
+    background-color: #f0f8ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px -20px 0 -20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #667eea;
+}
+
 .category-name {
     font-weight: 600;
     color: #333;
@@ -287,7 +356,7 @@ header p {
 
 .charts-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-top: 30px;
 }
@@ -313,6 +382,19 @@ header p {
         grid-template-columns: 1fr;
         gap: 20px;
         margin-top: 20px;
+    }
+    
+    .tax-summary {
+        padding: 15px;
+    }
+    
+    .tax-item {
+        padding: 8px 0;
+    }
+    
+    .tax-item.total {
+        padding: 12px;
+        font-size: 1.1rem;
     }
     
     .chart-container {
