@@ -1,6 +1,30 @@
 // Federal Tax Rates by Year and Income Bracket
 // TODO: Replace with real federal tax rate data
 const federalTaxRates = {
+    2025: {
+        brackets: [
+            { min: 0, max: 11000, rate: 0.10 },
+            { min: 11000, max: 44725, rate: 0.12 },
+            { min: 44725, max: 95375, rate: 0.22 },
+            { min: 95375, max: 182050, rate: 0.24 },
+            { min: 182050, max: 231250, rate: 0.32 },
+            { min: 231250, max: 578125, rate: 0.35 },
+            { min: 578125, max: Infinity, rate: 0.37 }
+        ],
+        standardDeduction: 13850
+    },
+    2024: {
+        brackets: [
+            { min: 0, max: 11000, rate: 0.10 },
+            { min: 11000, max: 44725, rate: 0.12 },
+            { min: 44725, max: 95375, rate: 0.22 },
+            { min: 95375, max: 182050, rate: 0.24 },
+            { min: 182050, max: 231250, rate: 0.32 },
+            { min: 231250, max: 578125, rate: 0.35 },
+            { min: 578125, max: Infinity, rate: 0.37 }
+        ],
+        standardDeduction: 13850
+    },
     2023: {
         brackets: [
             { min: 0, max: 11000, rate: 0.10 },
@@ -37,6 +61,18 @@ const federalTaxRates = {
         ],
         standardDeduction: 12550
     },
+    2021: {
+        brackets: [
+            { min: 0, max: 9950, rate: 0.10 },
+            { min: 9950, max: 40525, rate: 0.12 },
+            { min: 40525, max: 86375, rate: 0.22 },
+            { min: 86375, max: 164925, rate: 0.24 },
+            { min: 164925, max: 209425, rate: 0.32 },
+            { min: 209425, max: 523600, rate: 0.35 },
+            { min: 523600, max: Infinity, rate: 0.37 }
+        ],
+        standardDeduction: 12550
+    },
     2020: {
         brackets: [
             { min: 0, max: 9875, rate: 0.10 },
@@ -48,12 +84,110 @@ const federalTaxRates = {
             { min: 518400, max: Infinity, rate: 0.37 }
         ],
         standardDeduction: 12400
+    },
+    2019: {
+        brackets: [
+            { min: 0, max: 9700, rate: 0.10 },
+            { min: 9700, max: 39475, rate: 0.12 },
+            { min: 39475, max: 84200, rate: 0.22 },
+            { min: 84200, max: 160725, rate: 0.24 },
+            { min: 160725, max: 204100, rate: 0.32 },
+            { min: 204100, max: 510300, rate: 0.35 },
+            { min: 510300, max: Infinity, rate: 0.37 }
+        ],
+        standardDeduction: 12200
+    },
+    2018: {
+        brackets: [
+            { min: 0, max: 9525, rate: 0.10 },
+            { min: 9525, max: 38700, rate: 0.12 },
+            { min: 38700, max: 82500, rate: 0.22 },
+            { min: 82500, max: 157500, rate: 0.24 },
+            { min: 157500, max: 200000, rate: 0.32 },
+            { min: 200000, max: 500000, rate: 0.35 },
+            { min: 500000, max: Infinity, rate: 0.37 }
+        ],
+        standardDeduction: 12000
+    },
+    2017: {
+        brackets: [
+            { min: 0, max: 9325, rate: 0.10 },
+            { min: 9325, max: 37950, rate: 0.15 },
+            { min: 37950, max: 91900, rate: 0.25 },
+            { min: 91900, max: 191650, rate: 0.28 },
+            { min: 191650, max: 416700, rate: 0.33 },
+            { min: 416700, max: 418400, rate: 0.35 },
+            { min: 418400, max: Infinity, rate: 0.396 }
+        ],
+        standardDeduction: 6350
+    },
+    2016: {
+        brackets: [
+            { min: 0, max: 9275, rate: 0.10 },
+            { min: 9275, max: 37650, rate: 0.15 },
+            { min: 37650, max: 91150, rate: 0.25 },
+            { min: 91150, max: 190150, rate: 0.28 },
+            { min: 190150, max: 413350, rate: 0.33 },
+            { min: 413350, max: 415050, rate: 0.35 },
+            { min: 415050, max: Infinity, rate: 0.396 }
+        ],
+        standardDeduction: 6300
+    },
+    2015: {
+        brackets: [
+            { min: 0, max: 9225, rate: 0.10 },
+            { min: 9225, max: 37450, rate: 0.15 },
+            { min: 37450, max: 90750, rate: 0.25 },
+            { min: 90750, max: 189300, rate: 0.28 },
+            { min: 189300, max: 411500, rate: 0.33 },
+            { min: 411500, max: 413200, rate: 0.35 },
+            { min: 413200, max: Infinity, rate: 0.396 }
+        ],
+        standardDeduction: 6300
+    },
+    2014: {
+        brackets: [
+            { min: 0, max: 9075, rate: 0.10 },
+            { min: 9075, max: 36900, rate: 0.15 },
+            { min: 36900, max: 89350, rate: 0.25 },
+            { min: 89350, max: 186350, rate: 0.28 },
+            { min: 186350, max: 405100, rate: 0.33 },
+            { min: 405100, max: 406750, rate: 0.35 },
+            { min: 406750, max: Infinity, rate: 0.396 }
+        ],
+        standardDeduction: 6200
     }
 };
 
 // Federal Budget Data by Year - Based on General Federal Income Tax Revenue
 // Source: Congressional Budget Office and Treasury Department data
 const federalBudgetData = {
+    2025: {
+        totalSpending: 6.5, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2024: {
+        totalSpending: 6.3, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
     2023: {
         totalSpending: 6.13, // Trillion dollars
         categories: [
@@ -93,6 +227,19 @@ const federalBudgetData = {
             { name: "Other Programs", percentage: 15.5, description: "All other federal programs and agencies" }
         ]
     },
+    2021: {
+        totalSpending: 6.82, // Trillion dollars
+        categories: [
+            { name: "Health Programs", percentage: 29.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 12.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 10.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 12.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 7.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 8.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 6.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 15.5, description: "All other federal programs and agencies" }
+        ]
+    },
     2020: {
         totalSpending: 6.55, // Trillion dollars
         categories: [
@@ -104,6 +251,84 @@ const federalBudgetData = {
             { name: "Infrastructure & Science", percentage: 8.5, description: "Highways, transit, NASA, energy programs, agriculture support" },
             { name: "Government Operations", percentage: 6.0, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
             { name: "Other Programs", percentage: 14.0, description: "All other federal programs and agencies" }
+        ]
+    },
+    2019: {
+        totalSpending: 4.4, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2018: {
+        totalSpending: 4.1, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2017: {
+        totalSpending: 4.0, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2016: {
+        totalSpending: 3.9, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2015: {
+        totalSpending: 3.7, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
+        ]
+    },
+    2014: {
+        totalSpending: 3.5, // Trillion dollars - TODO: Update with actual data
+        categories: [
+            { name: "Health Programs", percentage: 28.0, description: "Medicaid, CHIP, ACA subsidies, NIH, CDC, FDA, Veterans healthcare, Medicare Parts B & D" },
+            { name: "Defense & National Security", percentage: 14.0, description: "Department of Defense, nuclear weapons, overseas operations, Homeland Security" },
+            { name: "Interest on National Debt", percentage: 13.0, description: "Servicing Treasury securities and trust funds" },
+            { name: "Safety Net Programs", percentage: 11.0, description: "SNAP, TANF, SSI, school meals, housing assistance" },
+            { name: "Education & Social Services", percentage: 6.0, description: "K-12 education aid, Pell Grants, job training, Head Start" },
+            { name: "Infrastructure & Science", percentage: 7.0, description: "Highways, transit, NASA, energy programs, agriculture support" },
+            { name: "Government Operations", percentage: 7.5, description: "Law enforcement, diplomacy, foreign aid, EPA, administrative costs" },
+            { name: "Other Programs", percentage: 13.5, description: "All other federal programs and agencies" }
         ]
     }
 };
